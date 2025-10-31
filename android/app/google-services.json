@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "2654215405",
+    "project_id": "scetch-cloud",
+    "storage_bucket": "scetch-cloud.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:2654215405:android:35b53c4cf25ebdaa2d00e4",
+        "android_client_info": {
+          "package_name": "com.example.sketch_cloud"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASMLaDOmao92OjKm6oa5PG-s_kwncXbiY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

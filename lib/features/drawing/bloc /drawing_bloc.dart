@@ -17,6 +17,9 @@ final class DrawingBloc extends Bloc<DrawingEvent, DrawingState> {
     : _storageService = storageService,
       _notificationService = NotificationService(),
       super(DrawingInitial()) {
+
+    _notificationService.initialize();
+    
     on<DrawingSaved>(_onDrawingSaved);
     on<DrawingExported>(_onDrawingExported);
     on<DrawingUpdated>(_onDrawingUpdated);

@@ -23,21 +23,7 @@ class _GalleryScreenState extends State<GalleryScreen>
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
-    // Первоначальная загрузка
     _loadImages();
-  }
-
-  @override
-  void dispose() {
-    WidgetsBinding.instance.removeObserver(this);
-    super.dispose();
-  }
-
-  @override
-  void didChangeAppLifecycleState(AppLifecycleState state) {
-    if (state == AppLifecycleState.resumed) {
-      _loadImages();
-    }
   }
 
   void _loadImages() {

@@ -31,7 +31,6 @@ class NotificationService {
     _isInitialized = true;
   }
 
-  /// Показать уведомление об успешном сохранении
   Future<void> showSaveSuccessNotification() async {
     const AndroidNotificationDetails androidDetails =
         AndroidNotificationDetails(
@@ -58,7 +57,6 @@ class NotificationService {
     );
   }
 
-  /// Показать уведомление об ошибке
   Future<void> showErrorNotification(String message) async {
     const AndroidNotificationDetails androidDetails =
         AndroidNotificationDetails(

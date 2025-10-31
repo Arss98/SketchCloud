@@ -13,16 +13,13 @@ class DrawingPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    // Рисуем белый фон
     final backgroundPaint = Paint()..color = Colors.white;
     canvas.drawRect(Rect.fromLTWH(0, 0, size.width, size.height), backgroundPaint);
 
-    // Рисуем фоновое изображение
     if (backgroundImage != null) {
       _paintBackgroundImage(canvas, size);
     }
 
-    // Рисуем точки рисования
     _paintDrawingPoints(canvas);
   }
 
@@ -32,12 +29,10 @@ class DrawingPainter extends CustomPainter {
       final imageWidth = image.width.toDouble();
       final imageHeight = image.height.toDouble();
       
-      // Вычисляем масштаб для вписывания изображения
       final scaleX = size.width / imageWidth;
       final scaleY = size.height / imageHeight;
       final scale = scaleX < scaleY ? scaleX : scaleY;
       
-      // Вычисляем отступы для центрирования
       final offsetX = (size.width - (imageWidth * scale)) / 2;
       final offsetY = (size.height - (imageHeight * scale)) / 2;
       
@@ -57,7 +52,6 @@ class DrawingPainter extends CustomPainter {
       final currentPoint = points[i];
       final nextPoint = points[i + 1];
       
-      // Пропускаем точки-разделители
       if (currentPoint.offset == Offset.zero || nextPoint.offset == Offset.zero) {
         continue;
       }

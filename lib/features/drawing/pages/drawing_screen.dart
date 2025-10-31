@@ -290,10 +290,8 @@ class _DrawingScreenState extends State<DrawingScreen> {
       final file = await FileService.createTempImageFile(imageBytes);
 
       if (widget.image != null) {
-        // Обновляем существующее изображение
         context.read<DrawingBloc>().add(DrawingUpdated(file, widget.image!.id));
       } else {
-        // Создаем новое изображение
         context.read<DrawingBloc>().add(DrawingSaved(file));
       }
     } catch (e) {

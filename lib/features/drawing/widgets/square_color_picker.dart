@@ -38,7 +38,7 @@ class SquareColorPicker extends StatelessWidget {
     return Dialog(
       backgroundColor: Colors.transparent,
       child: Container(
-        padding: const EdgeInsets.all(20), // Отступ от краев 20
+        padding: const EdgeInsets.all(20), 
         decoration: BoxDecoration(
           color: Colors.grey,
           borderRadius: BorderRadius.circular(20),
@@ -52,8 +52,8 @@ class SquareColorPicker extends StatelessWidget {
               physics: const NeverScrollableScrollPhysics(),
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 5,
-                crossAxisSpacing: 10, // Расстояние между элементами по горизонтали
-                mainAxisSpacing: 10, // Расстояние между элементами по вертикали
+                crossAxisSpacing: 10, 
+                mainAxisSpacing: 10, 
               ),
               itemCount: colorPalette.length,
               itemBuilder: (context, index) {
@@ -64,11 +64,11 @@ class SquareColorPicker extends StatelessWidget {
                     Navigator.of(context).pop();
                   },
                   child: Container(
-                    width: 40, // Ширина 40
-                    height: 40, // Высота 40
+                    width: 40, 
+                    height: 40, 
                     decoration: BoxDecoration(
                       color: color,
-                      shape: BoxShape.circle, // Круглая форма
+                      shape: BoxShape.circle, 
                       border: Border.all(
                         color: selectedColor == color
                             ? Colors.white
